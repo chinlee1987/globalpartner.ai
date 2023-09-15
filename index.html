@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <title>Global Partner</title>
+  <title>Global Partner | AIGC Digital Marketing Creation</title>
 </head>
 <body>
 <style type="text/css">
@@ -16,15 +17,15 @@ b, s, u, i, img, div, span { text-decoration: none; transition: .2s all ease-in 
 button, .btn { border: none; color: #fff; background-color: #000; cursor: pointer }
 button:hover, .btn:hover { color: #fff; background-color: #ff3311; box-shadow: 0 10px 30px #0002; transform: translateY(-2px) }
 button:hover > * { color: #fff !important }
-h1, h2, h3, h4, h5 { font-weight: bold; margin: 0; margin-bottom: .5rem } h1 { font-size: 3rem; font-weight: bold; } h2 { font-size: 1.2rem } h3, h4, h5 { font-size: 1rem }
+h1, h2, h3, h4, h5 { font-weight: bold; margin: 0; margin-bottom: .5rem } h1 { font-size: 3rem; font-weight: bold; } h2 { font-size: 1.5rem } h3, h4, h5 { font-size: 1.2rem }
 big, .big { font-size: 1.5rem } small, sub, .small { font-size: .8rem }
-main { padding-top: 3.2rem } footer { border-top: 1px solid rgba(0, 0, 0, .1); padding: 3rem 1rem 2rem 1rem }
+main { padding-top: 1rem } footer { border-top: 1px solid rgba(0, 0, 0, .1); padding: 3rem 1rem 2rem 1rem }
 section, .section { width: 1000px; margin: 0 auto }
 code, pre, .code { font-family: menlo, consolas, monospace !important }
-img { color: #fff; box-shadow: 4px 6px 10px 2px rgb(0 0 0 / 9%) }
+img, video { color: #fff; box-shadow: 4px 6px 10px 2px rgb(0 0 0 / 9%) }
 svg { border-radius: 0 }
-nav { width: 100%; position: fixed; background-color: #eee; z-index: 10 }
-nav .menu a { color: #000; line-height: 3rem; text-decoration: none; display: inline-block; border-radius: 0; margin: 0 2rem; border-bottom: 2px solid transparent }
+nav { width: 100%; position: fixed; background-color: #eee3; z-index: 10 }
+nav .menu a { color: #000; line-height: 4rem; text-decoration: none; display: inline-block; border-radius: 0; margin: 0 2rem; border-bottom: 2px solid transparent }
 nav .menu a.active, nav .menu a:hover { color: #ff3311 }
 nav .menu a.active { border-bottom: 2px solid currentColor; color: #ff3311; font-weight: bold }
 
@@ -36,8 +37,8 @@ nav .menu a.active { border-bottom: 2px solid currentColor; color: #ff3311; font
 :focus { outline: 3px solid #ff3311; outline-offset: 2px }
 ::selection{ background: #ff3311; color: #1a1a1a }
 
-.bg { position:absolute; width:100%; height:100vh; pointer-events: none }
-.bg i { background-image: linear-gradient(0deg, rgba(255, 255, 255, 255), rgba(255, 255, 255, 0)); width: 100%; height: 300px; display: block; bottom: 0; left: 0; margin-top: -300px; position: relative; }
+.bg { position:absolute; width: 100%; min-height: 100vh; opacity: .5; pointer-events: none } .bg img { box-shadow: none }
+.bg i { background-image: linear-gradient(0deg, rgba(255, 255, 255, 255), rgba(255, 255, 255, 0)); width: 100%; height: 300px; display: block; bottom: 0; left: 0; position: absolute }
 .blur { -webkit-backdrop-filter: saturate(180%) blur(20px); backdrop-filter: saturate(180%) blur(20px) }
 
 
@@ -46,6 +47,7 @@ nav .menu a.active { border-bottom: 2px solid currentColor; color: #ff3311; font
   /*z-index: -20;*/
   line-height: 0;
   opacity: 1;
+  /*background: url(https://images.unsplash.com/photo-1619118884592-11b151f1ae11?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80);*/
   /*background-color: rgb(232, 238, 251); */
   /*background-image: url(https://uploads-ssl.webflow.com/63e9fe942b626c5adbd80bf9/63e9fe942b626c0306d80c90_Header%20-%20Flowbase.png);*/
   background-position: center top;
@@ -68,6 +70,7 @@ nav .menu a.active { border-bottom: 2px solid currentColor; color: #ff3311; font
   width: 600px; height: 600px; position: absolute; pointer-events: none;
   background-image: radial-gradient(circle, rgba(58, 158, 98, .33), rgba(255, 255, 255, 0) 47%);
 }
+.btn-main { padding: 1rem 3rem; font-size: 1.5rem; font-weight: normal }
 .splash {
   justify-content: center;
   align-self: center;
@@ -76,6 +79,13 @@ nav .menu a.active { border-bottom: 2px solid currentColor; color: #ff3311; font
   display: flex;
   position: relative;
 }
+.splash > div { padding: 1rem 4rem }
+.splash h1 { font-size: 4rem; line-height: 100% }
+.splash p { font-size: 1.2rem }
+.faq-list { width: 750px; margin: 0 auto }
+.faq-list details summary { font-size: 1.5rem; padding: 1rem 3rem; margin-bottom: 1rem; display: block; background: #f5f5f5 }
+.faq-list details p { font-size: 1.2rem; padding: .5rem 3rem }
+footer { background: #eee; border-radius: 0 }
 
 @media screen and (max-width: 750px) {
   section { width: 100% }
@@ -86,21 +96,30 @@ nav .menu a.active { border-bottom: 2px solid currentColor; color: #ff3311; font
 
 
 <nav class="blur" style="border-radius: 0px;">
-  <div class="menu center" style="margin: 0px auto; width: 800px;">
+  <div class="menu center" style="margin: 0px auto; width: 1000px;">
     <a href="/" class="active">Home</a>
-    <a href="javascript:void(0)">FAQs</a>
-    <a href="javascript:void(0)">Roadmap</a>
-    <a href="javascript:void(0)">Whitepaper</a>
+    <a href="javascript:void(0)">AI Avatar</a>
+    <a href="javascript:void(0)">AI Designer</a>
+    <a href="javascript:void(0)">AI Writer</a>
+    <a href="javascript:void(0)">AI Model</a>
+    <a href="javascript:void(0)">Pricing</a>
+    <a href="" class="btn" style="color:#fff; line-height: 1.5rem; border-radius: 2rem">BOOK A DEMO</a>
   </div>
 </nav>
 
+<div class="bg">
+  <!-- https://unsplash.com/@fakurian -->
+  <!-- https://unsplash.com/@werclive -->
+  <img src="https://images.unsplash.com/photo-1676354201012-0ca201c52490?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3000&q=80" width="100%" style="opacity: .5">
+  <i></i>
+</div>
 <main class="gradient-main">
-  <section style="min-height: 100vh">
-<!--     <div class="gradient-1" style="top: 40%"></div>
-    <div class="gradient-2" style="right: 0"></div> -->
-    <div class="splash">
-
-
+  <section style="min-height: 100vh; width: 100%; box-shadow: 0 140px 160px #e5e6e8, inset 0 -100px 100px #e5e6e8; background: url(https://images.unsplash.com/photo-1676263813382-bb5ba4b63f91?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2942&q=80) center center/120% no-repeat">
+    <div class="splash" style="width: 1000px; margin: 0 auto">
+      <div style="padding: 0">
+        <h1>AIGC Digital Platform for Marketing Conent Creation</h1>
+        <h2 style="opacity: .5">We makes creative content creation almost limitless.</h2>
+      </div>
 
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="480px" height="480px" viewBox="1285 101 970 691" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
@@ -109,16 +128,127 @@ nav .menu a.active { border-bottom: 2px solid currentColor; color: #ff3311; font
  <path fill="#ff3311" id="Shape" d="M1527.5 602 C1393.571 602 1285 493.429 1285 359.5 1285 225.571 1393.571 117 1527.5 117 1638.368 117 1731.859 191.403 1760.768 293 L1528 293 C1488.788 293 1457 324.788 1457 364 1457 403.212 1488.788 435 1528 435 1565.7 435 1596.537 405.617 1598.859 368.502 L1769.787 369.715 C1764.434 498.906 1658.007 602 1527.5 602 Z" fill-opacity="1" stroke="none"/>
  <path fill="#ff3311" id="Ellipse-copy" d="M1770 602 L1770 385 1771.326 385 C1770.45 376.62 1770 368.112 1770 359.5 1770 225.571 1878.571 117 2012.5 117 2146.429 117 2255 225.571 2255 359.5 2255 493.262 2146.699 601.728 2013 601.998 L2013 602 2012.5 602 1770 602 Z M2013 430 C2052.212 430 2084 398.212 2084 359 2084 319.788 2052.212 288 2013 288 1973.788 288 1942 319.788 1942 359 1942 398.212 1973.788 430 2013 430 Z" fill-opacity="1" stroke="none"/>
 </svg>
-
-
-
     </div>
-    <div class="center" style="padding-bottom: 2rem">
-      <p><button style="padding: 1rem 2rem">The Future is now! Coming soon.</button></p>
+
+  </section>
+  <section style="min-height: 100vh">
+    <div class="splash">
+      <video id="veed" src="https://virbo.wondershare.cn/video/homepage/virbo-video5.mp4" width="300" muted autoplay loop></video>
+      <!-- <img src="https://www.thispersondoesnotexist.com/" width="300px"> -->
+      <!-- <img src="https://cdn-site-assets.veed.io/cdn-cgi/image/width=512,quality=75/AI_avatars_with_diverse_styles_and_personalities_aac5939939/AI_avatars_with_diverse_styles_and_personalities_aac5939939.png?width=1024&quality=80" width="500"> -->
+      <div>
+        <h1>Create Your Avatar, Powered By AI</h1>
+        <p>Produce your own virtual digital human avatar, combined with the digital mouthpiece technology can replace the real person on camera, suitable for corporate communications, education and training, oral video and other major application scenarios.</p>
+        <ul>
+          <li>Replicate human expression 1:1</li>
+          <li>Substitute for human on camera, applicable in various marketing scenarios</li>
+          <li>Zero production cost</li>
+        </ul>
+        <p><a href="" class="btn btn-main">BOOK A DEMO</a></p>
+      </div>
+    </div>
+
+
+    <div class="splash">
+      <div>
+        <h1>Generate Virtual Digital Model</h1>
+        <p>It is suitable for e-commerce business scenarios such as wigs, clothing, beauty makeup, glasses, etc. It does not need to hire real models for studio shooting, and quickly generates a virtual digital human image that perfectly blends with your products.</p>
+        <p><a href="" class="btn btn-main">BOOK A DEMO</a></p>
+      </div>
+      <img src="https://kreadoai.com/img/home/model/ai-model-introduce.webp" width="400" style="box-shadow: none">
+      <!-- <img src="https://images.media.io/images2023/free-avatar-maker.png" width="500px" style="box-shadow: none"> -->
+    </div>
+
+
+    <div class="splash">
+      <img src="https://uploads-ssl.webflow.com/5ee0a01b09389eebf4c09b45/6418a896b18eb881c8129bb5_Ai-Product-Images-Tile.webp" height="250" style="margin: -80px">
+      <img src="https://i0.wp.com/breeze.ai/wp-content/uploads/2023/08/group1.png?w=2160&ssl=1" height="400" style="border-radius: 0; box-shadow: none">
+    </div>
+    <div class="splash center" style="padding: 1rem; display: block;">
+      <h1>AI generated product photos in seconds</h1>
+      <p>Create product images and photos proven to increase sales, in seconds. Add backgrounds with AI, Turn a product images into a professional product photos.</p>
+      <p><a href="" class="btn btn-main">BOOK A DEMO</a></p>
+      <!-- https://creatorkit.com/ai-product-photos -->
+      <!-- https://breeze.ai/ -->
+    </div>
+
+
+    <div class="splash">
+      <img src="https://ts1.cn.mm.bing.net/th/id/R-C.fb6481417eeeae45d02e38dcfa9399e4?rik=SXA19kaf2HqAhg&pid=ImgRaw&r=0" width="300" style="box-shadow: none">
+      <div>
+        <h1>AI Writer, Content Generator & Writing Assistant.</h1>
+        <p>AI generates marketing copy content to help you improve marketing effectiveness.</p>
+      </div>
+    </div>
+
+
+    <div class="splash">
+      <div>
+        <h1>Find Bestsellers, Connect with Influencers</h1>
+        <p>Tracking Top-selling products in the past days, Fast-growing products in the past days, Store inventory analysis.</p>
+      </div>
+      <video id="veed2" src="https://cdn.tabcut.com/dataservice/media/video/7274945451755883777.mp4?auth_key=1694773162-0-0-118552036877007c585b09fb60d2df7d" width="300" muted autoplay loop></video>
     </div>
   </section>
-  <footer class="center"><p>&copy; 2023 Global Partner, All rights Reserved.</p></footer>
-</main>
 
+
+
+  <section style="padding-top: 10rem">
+    <h1 class="center">🤔 FAQs</h1>
+    <div class="faq-list">
+      <details>
+        <summary>How can I experience Global Partner's service for free?</summary>
+        <p>You can register an account for free here, use the G coins included in the free membership to create video synthesis for free, and experience other AI products and services. You can also purchase and upgrade the membership service, and we will provide you with more service rights and the duration of making videos.
+        </p>
+      </details>
+      <details>
+        <summary>After purchasing a membership, what is the included G coins and what is its function?</summary>
+        <p>G coins is a virtual currency provided by Global Partner AI, which can be used in Global Partner AI product services.
+        After you purchase and upgrade to a Global Partner AI member, the corresponding G coins will be included. When you create digital human video, AI text dubbing service, AI model and other services, the corresponding G coins will be deducted according to the length of the video generated by your creation or the number of times it is used.
+        When the Global Partner AI membership you purchased expires, you can also continue to use our products and services by recharging G coins separately.
+        At the same time, the G coins balance you have will not expire, but you cannot withdraw cash, transfer it to others, or refund it.</p>
+      </details>
+
+      <details>
+        <summary>What happens if the purchased Global Partner AI membership plan expires?</summary>
+        <p>After the purchase of the corresponding membership plan service expires, you will lose the corresponding membership service rights; but your G coins will continue to be kept in your account, and can continue to be used to use free characters for video production and synthesis or use our provided Other AI products and services.
+        Your G coins balance will not expire, you can continue to upgrade and purchase a membership plan that suits you.</p>
+      </details>
+
+      <details>
+        <summary>Can I upgrade my account membership service plan at any time?</summary>
+        <p>Can be upgraded at any time. If you want to create more video content and long video composites, you can re-purchase the membership plan at any time. The service cycle of your membership plan will also be extended accordingly, and the K currency balance of your account will also be credited to the K currency included in the corresponding plan.
+        You can also recharge separately to buy more G coins for more video creation.</p>
+      </details>
+
+      <details>
+        <summary>How is the G coins value consumed?</summary>
+        <p>G coins will be deducted only when the video is successfully generated. Your video is in a draft state, or you are using the trial playback function, and G coins will not be consumed.
+        If you have generated it, the system will deduct the corresponding G coins. If you voluntarily delete the voice or video content of the creative content, we will not refund the G coins.
+        Please note: In the case of creation failure or timeout exception, we will refund you the G coins corresponding to the deducted consumption, please feel free to use it.</p>
+      </details>
+
+    </div>    
+  </section>
+
+
+  <section>
+    <div class="center" style="padding-bottom: 2rem">
+      <!-- <p><button style="padding: 1rem 2rem">The Future is now! Coming soon.</button></p> -->
+      <p><a href="" class="btn btn-main">BOOK A DEMO</a></p>
+    </div>    
+  </section>
+
+  <footer class="center">
+    <p>Global Partner | AIGC Digital Marketing Creation</p>
+    <p>Help Center | Service Terms | Privacy Policy</p>
+    <p>&copy; 2023 Global Partner, All rights Reserved.</p>
+  </footer>
+</main>
+<script type="text/javascript">
+setTimeout(() => {
+  document.getElementById('veed').play()
+}, 2000)
+</script>
 </body>
 </html>
